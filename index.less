@@ -1,0 +1,122 @@
+@green  : #00CC00;
+@red    : #FF3333;
+@purple : #CC99FF;
+@orange : #FF9933;
+@yellow : #FFFF00;
+@blue   : #0099FF;
+
+atom-text-editor {
+  background: #222;
+
+  .cursor-line {
+    background: #333;
+  }
+
+  .selection .region {
+    background: #555;
+  }
+
+  .syntax--source,
+  .syntax--variable,
+  .syntax--text,
+  .syntax--operator,
+  .syntax--parameter.syntax--variable,
+  .syntax--keyword.syntax--operator,
+  .syntax--punctuation.syntax--section,
+  .syntax--punctuation.syntax--separator,
+  {
+    color: #EEEEEE;
+  }
+
+  .cursor,
+  .gutter,
+  {
+    color: white !important
+  }
+
+  .wrap-guide {
+    background: #555;
+  }
+
+  .indent-guide {
+    box-shadow: none;
+    border-left: 1px solid #555;
+  }
+
+  .invisible-character,
+  .syntax--comment,
+  {
+    color: #666666;
+  }
+
+  .invisible-character.eol {
+    color: transparent;
+  }
+
+  .trailing-whitespace,
+  {
+    background: @orange;
+    color: white;
+  }
+
+  .syntax--invalid.syntax--illegal {
+    background: @red;
+    color: white;
+  }
+
+  .syntax--class,
+  .syntax--constant,
+  .syntax--css.syntax--id,
+  .syntax--tag,
+  {
+    color: @green;
+  }
+
+  .syntax--keyword,
+  .syntax--language,
+  .syntax--html .syntax--attribute-name,
+  .syntax--xml .syntax--attribute-name,
+  {
+    color: @red;
+  }
+
+  .syntax--function,
+  .syntax--method,
+  {
+    color: @orange;
+  }
+
+  .syntax--symbol,
+  .syntax--symbol *,
+  .syntax--hashkey,
+  .syntax--hashkey *,
+  .syntax--numeric,
+  .syntax--language.syntax--boolean,
+  .syntax--language.syntax--nil,
+  .syntax--language.syntax--boolean,
+  {
+    color: @purple;
+  }
+
+  .syntax--string,
+  .syntax--regexp,
+  .syntax--regexp.syntax--punctuation,
+  {
+    color: @yellow;
+  }
+
+  .syntax--variable.syntax--instance,
+  .syntax--variable.syntax--instance *,
+  .syntax--variable.syntax--global,
+  .syntax--variable.syntax--global *,
+  .syntax--variable.syntax--class,
+  .syntax--variable.syntax--class *,
+  .syntax--variable-usage,
+  .syntax--variable-usage *,
+  .syntax--sass.syntax--variable-declaration,
+  .syntax--sass.syntax--variable-declaration .syntax--variable,
+  {
+    color: @blue;
+  }
+
+}

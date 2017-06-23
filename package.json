@@ -1,0 +1,15 @@
+{
+  "name": "atom-bmc-theme",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Atom BMC Theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/benoitmc/atom-bmc-theme",
+  "license": "WTFPL",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
