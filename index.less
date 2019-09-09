@@ -34,7 +34,9 @@ atom-text-editor:not([mini]) {
     color: white !important
   }
 
-  .wrap-guide {
+  .wrap-guide,
+  .omni-ruler,
+   {
     background: #555;
   }
 
@@ -54,6 +56,7 @@ atom-text-editor:not([mini]) {
   }
 
   .trailing-whitespace,
+  .syntax--invisibles-plus.syntax--no-break-space,
   {
     background: @orange;
     color: white;
@@ -65,6 +68,7 @@ atom-text-editor:not([mini]) {
   }
 
   .syntax--class,
+  .syntax--module,
   .syntax--constant,
   .syntax--css.syntax--id,
   .syntax--tag,
@@ -80,8 +84,10 @@ atom-text-editor:not([mini]) {
     color: @red;
   }
 
-  .syntax--function,
-  .syntax--method,
+  .syntax--ruby .syntax--def + .syntax--function, // ruby method def
+  .syntax--sass .syntax--mixin .syntax--keyword + .syntax--variable, // sass mixin def
+  .syntax--sass .syntax--include .syntax--keyword + .syntax--variable,  // sass mixin call
+  .syntax--coffee .syntax--function .syntax--function.syntax--name, // coffee def
   {
     color: @orange;
   }
@@ -93,7 +99,8 @@ atom-text-editor:not([mini]) {
   .syntax--numeric,
   .syntax--language.syntax--boolean,
   .syntax--language.syntax--nil,
-  .syntax--language.syntax--boolean,
+  .syntax--sass .syntax--rgb-value,
+  .syntax--sass .syntax--rgb-value *,
   {
     color: @purple;
   }
@@ -113,8 +120,8 @@ atom-text-editor:not([mini]) {
   .syntax--variable.syntax--class *,
   .syntax--variable-usage,
   .syntax--variable-usage *,
-  .syntax--sass.syntax--variable-declaration,
-  .syntax--sass.syntax--variable-declaration .syntax--variable,
+  .syntax--sass .syntax--variable,
+  .syntax--sass .syntax--variable-declaration > .syntax--punctuation, // sass $ sign
   .syntax--less .syntax--variable,
   {
     color: @blue;
